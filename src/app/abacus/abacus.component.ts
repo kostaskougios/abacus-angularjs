@@ -19,7 +19,7 @@ export class AbacusComponent implements OnInit {
   leftOfRow(row: number): Array<number> {
     let x = [];
     var i = 1;
-    while (x.push(i++) < row) { };
+    if (row > 0) while (x.push(i++) < row) { };
     return x;
   }
 
