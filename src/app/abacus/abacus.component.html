@@ -1,11 +1,11 @@
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">
     <div class="abacus-left">
-        <a *ngFor="let column of leftOfRow(row)" (click)="setRow(rowIdx,column)">
+        <a *ngFor="let column of leftOfRow(row)" (click)="clickLeft(rowIdx,column)">
             <img src="/assets/images/bus1.svg" width="72" height="45">
         </a>
     </div>
     <div class="abacus-right">
-        <a *ngFor="let column of rightOfRow(row)" (click)="setRow(rowIdx,column)">
+        <a *ngFor="let column of rightOfRow(row)" (click)="clickRight(rowIdx,column)">
             <img src="/assets/images/bus1.svg" width="72" height="45">
         </a>
     </div>

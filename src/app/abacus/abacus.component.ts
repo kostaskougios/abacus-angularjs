@@ -28,8 +28,11 @@ export class AbacusComponent implements OnInit {
     return x;
   }
 
-  setRow(rowIdx: number, column: number): void {
+  clickLeft(rowIdx: number, column: number): void {
     this.rows[rowIdx] = column - 1;
   }
 
+  clickRight(rowIdx: number, column: number): void {
+    this.rows[rowIdx] = column;
+  }
 }
