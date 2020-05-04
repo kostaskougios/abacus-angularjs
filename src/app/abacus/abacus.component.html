@@ -1,6 +1,7 @@
 <div *ngFor="let row of rows" class="abacus-row">
-    {{row}}
-    <a *ngFor="let column of leftOfRow(row)">
-        <img src="/assets/images/bus1.svg" width="72" height="45">
-    </a>
+    <div class="abacus-left">
+        <a *ngFor="let column of leftOfRow(row)">
+            <img src="/assets/images/bus1.svg" width="72" height="45">
+        </a>
+    </div>
 </div>
