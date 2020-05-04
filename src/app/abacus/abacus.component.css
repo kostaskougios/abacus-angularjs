@@ -15,3 +15,11 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.abacus-left img {
+    padding-right: 8px;
+}
+
+.abacus-right img {
+    padding-left: 8px;
+}
