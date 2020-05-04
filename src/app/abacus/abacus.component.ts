@@ -7,7 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbacusComponent implements OnInit {
 
+  availableLookAndFeel = [
+    {
+      img: "/assets/images/bus1.svg",
+      width: 72,
+      height: 45
+    },
+    {
+      img: "/assets/images/bus2.jpg",
+      width: 72,
+      height: 72
+    },
+    {
+      img: "/assets/images/ball1.png",
+      width: 50,
+      height: 50
+    }
+  ];
   rows = [];
+  activeLookAndFeel = this.availableLookAndFeel[2];
 
   constructor() {
     this.reset();
