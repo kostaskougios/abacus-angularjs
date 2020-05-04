@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AbacusComponent } from './abacus/abacus.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { AbacusComponent } from './abacus/abacus.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: AbacusComponent },
+      { path: '', component: HomePageComponent },
+      { path: 'abacus', component: AbacusComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     AbacusComponent,
+    HomePageComponent,
   ],
   bootstrap: [AppComponent]
 })
