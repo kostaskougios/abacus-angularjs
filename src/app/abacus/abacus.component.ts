@@ -14,7 +14,7 @@ export class AbacusComponent implements OnInit {
       height: 50
     },
     {
-      img: "/assets/images/london-bus.jpg",
+      img: "/assets/images/london-bus.png",
       width: 50,
       height: 50
     }
