@@ -4,6 +4,10 @@ app-abacus {
   width: 100%;
 }
 
+body {
+    background: url('/assets/images/wood.jpg');
+}
+
 * {
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
