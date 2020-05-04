@@ -1,17 +1,10 @@
 <p>
-    On a mobile phone or tablet please use landscape orientation if the abacus doesn't fit into the screen.
-    Please use clicks to mvoe things around, not drag & drop.
+    Please click to move the beads around.
 </p>
 <div>
     <button (click)="reset()">Reset</button>
     &nbsp;
     <button (click)="nextTheme()">Next Theme</button>
-    &nbsp;
-    <button (click)="small()">Small</button>
-    &nbsp;
-    <button (click)="medium()">Medium</button>
-    &nbsp;
-    <button (click)="large()">Large</button>
 </div>
 
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">

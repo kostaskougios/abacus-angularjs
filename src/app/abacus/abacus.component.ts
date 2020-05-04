@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-abacus',
@@ -32,9 +32,16 @@ export class AbacusComponent implements OnInit {
 
   constructor() {
     this.reset();
+    this.onResize(null);
   }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    let iw = window.innerWidth;
+    this.sizeFactor = iw / 700;
   }
 
   leftOfRow(row: number): Array<number> {
@@ -74,17 +81,5 @@ export class AbacusComponent implements OnInit {
   }
   height(): number {
     return this.activeLookAndFeel.height * this.sizeFactor;
-  }
-
-  small(): void {
-    this.sizeFactor = 1;
-  }
-
-  medium(): void {
-    this.sizeFactor = 1.5;
-  }
-
-  large(): void {
-    this.sizeFactor = 2;
   }
 }
