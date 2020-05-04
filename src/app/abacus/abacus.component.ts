@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbacusComponent implements OnInit {
 
-  rows = [3, 5, 7, 2, 3, 4, 5, 6, 7, 10];
+  rows = [];
 
-  constructor() { }
+  constructor() {
+    this.reset();
+  }
 
   ngOnInit(): void {
   }
@@ -34,5 +36,9 @@ export class AbacusComponent implements OnInit {
 
   clickRight(rowIdx: number, column: number): void {
     this.rows[rowIdx] = column;
+  }
+
+  reset(): void {
+    this.rows = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
   }
 }

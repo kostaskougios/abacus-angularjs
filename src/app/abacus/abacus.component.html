@@ -1,3 +1,5 @@
+<button (click)="reset()">Reset</button>
+
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">
     <div class="abacus-left">
         <a *ngFor="let column of leftOfRow(row)" (click)="clickLeft(rowIdx,column)">
