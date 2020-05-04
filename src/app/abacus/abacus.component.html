@@ -1,20 +1,28 @@
+<p>
+    On a mobile phone or tablet please use landscape orientation if the abacus doesn't fit into the screen.
+    Please use clicks to mvoe things around, not drag & drop.
+</p>
 <div>
     <button (click)="reset()">Reset</button>
     &nbsp;
     <button (click)="nextTheme()">Next Theme</button>
+    &nbsp;
+    <button (click)="small()">Small</button>
+    &nbsp;
+    <button (click)="medium()">Medium</button>
+    &nbsp;
+    <button (click)="large()">Large</button>
 </div>
 
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">
     <div class="abacus-left">
         <a *ngFor="let column of leftOfRow(row)" (click)="clickLeft(rowIdx,column)">
-            <img src="{{activeLookAndFeel.img}}" width="{{activeLookAndFeel.width}}"
-                height="{{activeLookAndFeel.height}}">
+            <img src="{{activeLookAndFeel.img}}" width="{{width()}}" height="{{height()}}">
         </a>
     </div>
     <div class="abacus-right">
         <a *ngFor="let column of rightOfRow(row)" (click)="clickRight(rowIdx,column)">
-            <img src="{{activeLookAndFeel.img}}" width="{{activeLookAndFeel.width}}"
-                height="{{activeLookAndFeel.height}}">
+            <img src="{{activeLookAndFeel.img}}" width="{{width()}}" height="{{height()}}">
         </a>
     </div>
 </div>

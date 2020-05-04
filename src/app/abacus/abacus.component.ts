@@ -14,20 +14,21 @@ export class AbacusComponent implements OnInit {
       height: 50
     },
     {
-      img: "/assets/images/bus1.svg",
-      width: 50,
-      height: 50
-    },
-    {
       img: "/assets/images/bus2.jpg",
       width: 50,
       height: 50
     },
+    {
+      img: "/assets/images/bus1.svg",
+      width: 50,
+      height: 50
+    }
 
   ];
   rows = [];
   activeLookAndFeelIdx = 0;
   activeLookAndFeel = this.availableLookAndFeel[this.activeLookAndFeelIdx];
+  sizeFactor: number = 1;
 
   constructor() {
     this.reset();
@@ -66,5 +67,24 @@ export class AbacusComponent implements OnInit {
     this.activeLookAndFeelIdx++;
     if (this.activeLookAndFeelIdx >= this.availableLookAndFeel.length) this.activeLookAndFeelIdx = 0;
     this.activeLookAndFeel = this.availableLookAndFeel[this.activeLookAndFeelIdx];
+  }
+
+  width(): number {
+    return this.activeLookAndFeel.width * this.sizeFactor;
+  }
+  height(): number {
+    return this.activeLookAndFeel.height * this.sizeFactor;
+  }
+
+  small(): void {
+    this.sizeFactor = 1;
+  }
+
+  medium(): void {
+    this.sizeFactor = 1.5;
+  }
+
+  large(): void {
+    this.sizeFactor = 2;
   }
 }
