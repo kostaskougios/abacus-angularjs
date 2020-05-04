@@ -28,4 +28,8 @@ export class AbacusComponent implements OnInit {
     return x;
   }
 
+  setRow(rowIdx: number, column: number): void {
+    this.rows[rowIdx] = column - 1;
+  }
+
 }
