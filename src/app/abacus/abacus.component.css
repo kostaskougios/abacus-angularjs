@@ -6,9 +6,12 @@
 
 .abacus-left {
     flex-wrap: wrap;
-    flex: 1 1 50%;
+    flex: 1 1 auto;
 }
 
 .abacus-right {
     flex-wrap: wrap;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
 }
