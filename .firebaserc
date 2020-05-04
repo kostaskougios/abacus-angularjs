@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "abacus-64f90": {
+      "hosting": {
+        "my-app": [
+          "abacus-64f90"
+        ]
+      }
+    }
+  }
+}
