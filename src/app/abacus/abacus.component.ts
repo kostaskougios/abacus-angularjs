@@ -9,23 +9,25 @@ export class AbacusComponent implements OnInit {
 
   availableLookAndFeel = [
     {
-      img: "/assets/images/bus1.svg",
-      width: 72,
-      height: 45
-    },
-    {
-      img: "/assets/images/bus2.jpg",
-      width: 72,
-      height: 72
-    },
-    {
       img: "/assets/images/ball1.png",
       width: 50,
       height: 50
-    }
+    },
+    {
+      img: "/assets/images/bus1.svg",
+      width: 50,
+      height: 50
+    },
+    {
+      img: "/assets/images/bus2.jpg",
+      width: 50,
+      height: 50
+    },
+
   ];
   rows = [];
-  activeLookAndFeel = this.availableLookAndFeel[2];
+  activeLookAndFeelIdx = 0;
+  activeLookAndFeel = this.availableLookAndFeel[this.activeLookAndFeelIdx];
 
   constructor() {
     this.reset();
@@ -58,5 +60,11 @@ export class AbacusComponent implements OnInit {
 
   reset(): void {
     this.rows = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+  }
+
+  nextTheme(): void {
+    this.activeLookAndFeelIdx++;
+    if (this.activeLookAndFeelIdx >= this.availableLookAndFeel.length) this.activeLookAndFeelIdx = 0;
+    this.activeLookAndFeel = this.availableLookAndFeel[this.activeLookAndFeelIdx];
   }
 }

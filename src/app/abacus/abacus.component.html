@@ -1,4 +1,8 @@
-<button (click)="reset()">Reset</button>
+<div>
+    <button (click)="reset()">Reset</button>
+    &nbsp;
+    <button (click)="nextTheme()">Next Theme</button>
+</div>
 
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">
     <div class="abacus-left">
