@@ -36,7 +36,7 @@ export class AbacusComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     let iw = window.innerWidth;
-    this.sizeFactor = iw / 700;
+    this.sizeFactor = iw / 1000;
   }
 
   leftOfRow(row: number): Array<number> {
