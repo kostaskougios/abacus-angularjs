@@ -1,8 +1,14 @@
 .abacus-row {
     background-color: white;
+    display: flex;
+    width: 100%;
 }
 
 .abacus-left {
-    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+}
+
+.abacus-right {
     flex-wrap: wrap;
 }

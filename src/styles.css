@@ -1,5 +1,9 @@
 /* Global Styles */
 
+app-abacus {
+  width: 100%;
+}
+
 * {
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
