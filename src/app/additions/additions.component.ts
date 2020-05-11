@@ -8,11 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class AdditionsComponent implements OnInit {
 
   rows = [
-    {
-      a: 5,
-      b: 7,
-      r: 12
-    }
   ];
 
   isAbacus = false;
@@ -23,7 +18,11 @@ export class AdditionsComponent implements OnInit {
   }
 
   isCorrect(row): boolean {
-    return row.a + row.b == row.r;
+    return row.r != "" && (row.a + row.b == row.r);
+  }
+
+  isIncorrect(row): boolean {
+    return row.r != "" && !this.isCorrect(row)
   }
 
   newRow(max: number): void {
@@ -36,7 +35,7 @@ export class AdditionsComponent implements OnInit {
       {
         a: a,
         b: b,
-        r: 0
+        r: ""
       }
     );
   }
