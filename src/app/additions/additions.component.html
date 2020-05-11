@@ -18,7 +18,7 @@
     +
     <span class="fixed-width">{{row.b}}</span>
     =
-    <input type="text" [value]="row.r" (input)="row.r=$event.target.value">
+    <input type="number" [value]="row.r" (input)="row.r=$event.target.value">
 
     <em *ngIf="isCorrect(row)" class="correct">Correct</em>
     <em *ngIf="isIncorrect(row)" class="incorrect">Incorrect</em>
