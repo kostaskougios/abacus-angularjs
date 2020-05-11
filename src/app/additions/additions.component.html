@@ -1,7 +1,12 @@
+<app-abacus *ngIf="isAbacus"></app-abacus>
+
 <p class="help">
-    Please calculate the results. Press the "20" or "100" button to add more problems for you to solve.
+    Please calculate the results.
+    Press the "20" or "100" button to add more problems for you to solve.
+    Press the "Abacus" button to show/hide the abacus.
     <button (click)="newRow(20)">20</button>
     <button (click)="newRow(100)">100</button>
+    <button (click)="abacus()">Abacus</button>
 </p>
 
 <p class="row" *ngFor="let row of rows">

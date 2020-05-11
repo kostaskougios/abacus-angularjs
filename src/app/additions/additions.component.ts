@@ -15,6 +15,8 @@ export class AdditionsComponent implements OnInit {
     }
   ];
 
+  isAbacus = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,5 +39,9 @@ export class AdditionsComponent implements OnInit {
         r: 0
       }
     );
+  }
+
+  abacus(): void {
+    this.isAbacus = !this.isAbacus;
   }
 }
