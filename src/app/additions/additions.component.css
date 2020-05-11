@@ -13,3 +13,9 @@
     color: lightgreen;
     font-weight: bold;
 }
+
+.incorrect {
+    padding-left: 8px;
+    color: red;
+    font-weight: bold;
+}

@@ -5,4 +5,5 @@
     <input type="text" [value]="row.r" (input)="row.r=$event.target.value">
 
     <em *ngIf="isCorrect(row)" class="correct">Correct</em>
+    <em *ngIf="!isCorrect(row)" class="incorrect">Incorrect</em>
 </p>
