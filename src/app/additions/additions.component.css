@@ -12,6 +12,10 @@
     font-size: larger;
 }
 
+.row input {
+    width: 60px;
+}
+
 .correct {
     padding-left: 8px;
     color: lightgreen;
