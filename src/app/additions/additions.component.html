@@ -1,4 +1,8 @@
-<p class="help">Please calculate the results. Show it to a grownup when you are ready.</p>
+<p class="help">
+    Please calculate the results. Press the "20" or "100" button to add more problems for you to solve.
+    <button (click)="newRow(20)">20</button>
+    <button (click)="newRow(100)">100</button>
+</p>
 
 <p class="row" *ngFor="let row of rows">
     {{row.a}} + {{row.b}} =

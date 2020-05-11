@@ -3,6 +3,10 @@
     padding-bottom:16px;
 }
 
+.help button {
+    margin-left: 16px;
+}
+
 .row {
     color: white;
     font-size: larger;
