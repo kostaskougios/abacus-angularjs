@@ -5,7 +5,10 @@
 </p>
 
 <p class="row" *ngFor="let row of rows">
-    {{row.a}} + {{row.b}} =
+    <span class="fixed-width">{{row.a}}</span>
+    +
+    <span class="fixed-width">{{row.b}}</span>
+    =
     <input type="text" [value]="row.r" (input)="row.r=$event.target.value">
 
     <em *ngIf="isCorrect(row)" class="correct">Correct</em>

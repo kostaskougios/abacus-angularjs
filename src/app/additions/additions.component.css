@@ -16,6 +16,14 @@
     width: 60px;
 }
 
+.fixed-width {
+    width: 60px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
 .correct {
     padding-left: 8px;
     color: lightgreen;
