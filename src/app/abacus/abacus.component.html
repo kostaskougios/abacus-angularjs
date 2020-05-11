@@ -1,11 +1,11 @@
 <p class="help">
     Please click to move the beads around.
-</p>
-<div class="controls">
     <button (click)="reset()">Reset</button>
     &nbsp;
+    <!-- next version!
     <button (click)="nextTheme()">Change Beads</button>
-</div>
+    -->
+</p>
 
 <div *ngFor="let row of rows; let rowIdx=index" class="abacus-row">
     <div class="abacus-left">
