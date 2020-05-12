@@ -1,17 +1,21 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Adding</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        Please calculate the results.
+        Press the "20" button to add an addition problem up to the number 20, or the "100" button to add an
+        addition problem up to 100 for you to solve.
+        Press the "Abacus" button to show/hide the abacus.
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="newRow(20)">20</button>
+        <button mat-raised-button color="primary" (click)="newRow(100)">100</button>
+        <mat-slide-toggle (change)="abacus()" color="primary">Abacus</mat-slide-toggle>
+    </mat-card-actions>
+</mat-card>
+
 <app-abacus *ngIf="isAbacus"></app-abacus>
-
-<p class="help">
-    Please calculate the results.
-    Press the "20" button to add an addition problem up to the number 20, or the "100" button to add an addition problem
-    up to 100 for you to solve.
-    Press the "Abacus" button to show/hide the abacus.
-</p>
-
-<p class="help">
-    <button (click)="newRow(20)">20</button>
-    <button (click)="newRow(100)">100</button>
-    <button (click)="abacus()">Abacus</button>
-</p>
 
 <p class="row" *ngFor="let row of rows">
     <span class="fixed-width">{{row.a}}</span>
