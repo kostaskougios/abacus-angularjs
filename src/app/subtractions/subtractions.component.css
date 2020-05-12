@@ -1,10 +1,5 @@
-.help {
-    color: white;
-    padding-bottom:16px;
-}
-
-.help button {
-    margin-left: 16px;
+.mat-card {
+    margin-bottom:16px;
 }
 
 .row {
