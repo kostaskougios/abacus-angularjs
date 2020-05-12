@@ -10,8 +10,8 @@
         Press the "Abacus" button to show/hide the abacus.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button (click)="newRow(20)">20</button>
-        <button mat-button (click)="newRow(100)">100</button>
+        <button mat-raised-button color="primary" (click)="newRow(20)">20</button>
+        <button mat-raised-button color="primary" (click)="newRow(100)">100</button>
         <mat-slide-toggle (change)="abacus()" color="primary">Abacus</mat-slide-toggle>
     </mat-card-actions>
 </mat-card>
