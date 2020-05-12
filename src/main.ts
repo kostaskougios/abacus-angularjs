@@ -5,7 +5,7 @@ import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
 
 if (environment.production) {
-  let ga_id = "UA-25501899-9"
+  let ga_id = "UA-25501899-9";
 
   document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=${ga_id}"></script>`);
 
