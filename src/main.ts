@@ -7,8 +7,6 @@ import { AppModule } from './app/app.module';
 if (environment.production) {
   let ga_id = "UA-25501899-9";
 
-  document.write(`<script async src="https://www.googletagmanager.com/gtag/js?id=${ga_id}"></script>`);
-
   const script1 = document.createElement('script');
   script1.innerHTML = `
         window.dataLayer = window.dataLayer || [];
@@ -16,7 +14,7 @@ if (environment.production) {
             gtag('js', new Date());
             gtag('config', '${ga_id}', {
             'linker': {
-            'domains': ['abacus-64f90.firebaseapp.com']
+            'domains': ['abacus-64f90.web.app']
             }
         });
     `;
