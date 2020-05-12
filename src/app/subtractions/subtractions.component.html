@@ -1,1 +1,25 @@
-<p>subtractions works!</p>
+<app-abacus *ngIf="isAbacus"></app-abacus>
+
+<p class="help">
+    Please calculate the results.
+    Press the "20" button to add a subtraction problem up to the number 20, or the "100" button to add a subtraction
+    problem up to 100 for you to solve.
+    Press the "Abacus" button to show/hide the abacus.
+</p>
+
+<p class="help">
+    <button (click)="newRow(20)">20</button>
+    <button (click)="newRow(100)">100</button>
+    <button (click)="abacus()">Abacus</button>
+</p>
+
+<p class="row" *ngFor="let row of rows">
+    <span class="fixed-width">{{row.a}}</span>
+    -
+    <span class="fixed-width">{{row.b}}</span>
+    =
+    <input type="number" [value]="row.r" (input)="row.r=$event.target.value">
+
+    <em *ngIf="isCorrect(row)" class="correct">Correct</em>
+    <em *ngIf="isIncorrect(row)" class="incorrect">Incorrect</em>
+</p>
