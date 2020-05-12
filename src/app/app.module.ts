@@ -6,14 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { AbacusComponent } from './abacus/abacus.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AdditionsComponent } from './additions/additions.component';
 import { SubtractionsComponent } from './subtractions/subtractions.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
   imports: [
@@ -23,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSlideToggleModule,
     MatCardModule,
     MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       { path: 'abacus', component: AbacusComponent },
@@ -33,11 +37,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
     AbacusComponent,
     HomePageComponent,
     AdditionsComponent,
     SubtractionsComponent,
+    TopMenuComponent,
   ],
   bootstrap: [AppComponent]
 })

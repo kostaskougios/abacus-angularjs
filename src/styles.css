@@ -10,5 +10,14 @@ body {
     background: url('/assets/images/wood.jpg');
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+app-top-menu {
+  width: 100%;
+  height: 14px;
+  background-color: lightgrey;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
